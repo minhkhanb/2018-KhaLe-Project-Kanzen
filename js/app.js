@@ -48,6 +48,9 @@ Kanzen.carousel = () => {
             }
         }
     });
+
+    var dot_len = $('.owl-dots').find('.owl-dot').length;
+    //for
 }
 
 Kanzen.videoJS = () => {
