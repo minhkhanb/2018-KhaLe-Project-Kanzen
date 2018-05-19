@@ -121,12 +121,12 @@ section h2 {
     }
 
     #mainNav .navbar-nav > li > a, #mainNav .navbar-nav > li > a:focus {
-        color: rgba(255, 255, 255, .7)
+        color: #fff;
     }
 
     #mainNav .navbar-nav > li > a:focus:hover, #mainNav .navbar-nav > li > a:hover {
 
-        color: #ffffff;
+        color: rgba(255, 255, 255, .7);
     }
 
     #mainNav.navbar-shrink {
