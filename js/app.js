@@ -9,6 +9,7 @@ Kanzen.Init = () => {
     Kanzen.carousel();
     Kanzen.count_down_timer();
     Kanzen.videoJS();
+    Kanzen.circle_xecu();
 };
 
 Kanzen.commponent = () => {
@@ -51,6 +52,29 @@ Kanzen.carousel = () => {
 
     var dot_len = $('.owl-dots').find('.owl-dot').length;
     //for
+}
+
+Kanzen.circle_xecu = () => {
+    var radius = 200;
+    var $center = $('.circle_xecu .inner .icon-center');
+    var $list = $('.circle_xecu .inner li');
+    var $inner = $('.circle_xecu .inner');
+    var o_coors = {
+      x: $center.offset().left - $inner.offset().left + $center.width()/2,
+      y: $center.offset().top - $inner.offset().top + $center.height()/2
+    };
+
+    function toRadians (angle) {
+        return angle * (Math.PI / 180);
+    }
+
+    var deg = 0;
+    for(var i = 0; i < $list.length; i++) {
+        deg += 30;
+        $list.eq(i).find('a').css('left', o_coors.x + parseInt(Math.cos(toRadians(deg)) * radius));
+        $list.eq(i).find('a').css('top', o_coors.y - parseInt(Math.sin(toRadians(deg)) * radius));
+        console.log('deg:'+deg+'__'+ $list.eq(i).html() + '__' + Math.sin(toRadians(deg)) * radius);
+    }
 }
 
 Kanzen.videoJS = () => {
