@@ -1,23 +1,10 @@
 window.count_down = new Date("Sep 5, 2019 15:37:25");
+// JavaScript
+window.sr = ScrollReveal();
 var Kanzen = window.Kanzen || (window.Kanzen = {});
-
-var isScrolledIntoView = (elem) => {
-    var $elem = $(elem);
-    var $window = $(window);
-
-    var docViewTop = $window.scrollTop();
-    var docViewBottom = docViewTop + $window.height();
-
-    var elemTop = $elem.offset().top;
-    var elemBottom = elemTop + $elem.height();
-    console.log()
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-}
 
 
 Kanzen.Init = () => {
-    console.log("abc1");
-    Kanzen.effect();
     $("a[href='#top']").click(function (e) {
         e.preventDefault();
         $("html, body").animate({scrollTop: 0}, 0);
@@ -61,44 +48,13 @@ Kanzen.Init = () => {
     $('.advisor .item:visible').animateCss('fadeInUp');
     $('.strategic .item:visible').animateCss('zoomIn');*/
     Kanzen.count_down_timer();
+    sr.reveal('.con-text');
+    sr.reveal('.meet_our_team .item');
+    sr.reveal('.advisor .item');
+    sr.reveal('.fanfare_updates .c_card');
+    sr.reveal('.strategic .item');
+    sr.reveal('.carousel .c-panel');
 };
-
-Kanzen.effect = () => {
-    $(window).scroll(function () {
-        $('#debug').html($(window).scrollTop());
-        if ($(window).scrollTop() > 100) {
-            $("#left_right_div").animate({marginLeft: '100px'}, 900);
-            $("#right_left_img").animate({marginRight: '100px'}, 900);
-        }
-    });
-
-    var $animation_elements = $('.anim_elem');
-    var $window = $(window);
-
-    function check_if_in_view() {
-        var window_height = $window.height();
-        var window_top_position = $window.scrollTop();
-        var window_bottom_position = (window_top_position + window_height);
-
-        $.each($animation_elements, function () {
-            var $element = $(this);
-            var element_height = $element.outerHeight();
-            var element_top_position = $element.offset().top;
-            var element_bottom_position = (element_top_position + element_height);
-
-            //check to see if this current container is within viewport
-            if ((element_bottom_position >= window_top_position) &&
-                (element_top_position <= window_bottom_position)) {
-                $element.addClass('animated fadeInUp');
-            } else {
-                //$element.removeClass('animated fadeInUp');
-            }
-        });
-    }
-
-    $window.on('scroll resize', check_if_in_view);
-    $window.trigger('scroll');
-}
 
 Kanzen.count_down_timer = () => {
     // Set the date we're counting down to
