@@ -4,10 +4,11 @@ window.sr = ScrollReveal();
 var Kanzen = window.Kanzen || (window.Kanzen = {});
 
 Kanzen.Init = () => {
+    AOS.init();
     Kanzen.commponent();
     Kanzen.carousel();
     Kanzen.count_down_timer();
-    AOS.init();
+    Kanzen.videoJS();
 };
 
 Kanzen.commponent = () => {
@@ -46,6 +47,21 @@ Kanzen.carousel = () => {
                 loop: false
             }
         }
+    });
+}
+
+Kanzen.videoJS = () => {
+    $('.btn_play').on('click', function (evt) {
+        evt.preventDefault();
+        var el = $(this);
+        el.closest('.c-panel').addClass('playing');
+        var video = el.closest('.c-panel').find('video').get(0);
+        if(video.paused) {
+            video.play();
+        }
+        $(video).bind("ended", function() {
+            el.closest('.c-panel').removeClass('playing');
+        });
     });
 }
 

@@ -763,6 +763,10 @@ header {
 .w-nav {
     padding: 0 0 0 45px;
 }
+.c-panel.playing .thumbnails,
+.c-panel.playing .btn_play{
+    display:none;
+}
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-collapse {
         display: -ms-flexbox!important;
