@@ -56,6 +56,7 @@ Kanzen.carousel = () => {
 
 Kanzen.circle_xecu = () => {
     var radius = 200;
+    var radius_icon = 350;
     var $center = $('.circle_xecu .inner .icon-center');
     var $list = $('.circle_xecu .inner li');
     var $inner = $('.circle_xecu .inner');
@@ -69,11 +70,17 @@ Kanzen.circle_xecu = () => {
     }
 
     var deg = 0;
+    var deg_icon = 0;
+    var icon_itn_dis = 0;
     for(var i = 0; i < $list.length; i++) {
         deg += 30;
+        deg_icon += 36;
         $list.eq(i).find('a').css('left', o_coors.x + parseInt(Math.cos(toRadians(deg)) * radius));
         $list.eq(i).find('a').css('top', o_coors.y - parseInt(Math.sin(toRadians(deg)) * radius));
-        console.log('deg:'+deg+'__'+ $list.eq(i).html() + '__' + Math.sin(toRadians(deg)) * radius);
+
+        $list.eq(i).find('.icon_itn').css('left', o_coors.x + parseInt(Math.cos(toRadians(deg_icon)) * radius_icon));
+        $list.eq(i).find('.icon_itn').css('top', o_coors.y - parseInt(Math.sin(toRadians(deg_icon)) * radius_icon));
+
     }
 }
 

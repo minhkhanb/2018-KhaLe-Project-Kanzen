@@ -974,9 +974,10 @@ header {
     position:absolute;
 }
 .circle_xecu {
-    padding: 240px 0;
+    padding: 360px 0;
 }
-.circle_xecu .inner ul.initial li a {
+.circle_xecu .inner ul.initial li a,
+.circle_xecu .inner ul.initial .icon_itn{
     left:50%;
     top:50%;
     -webkit-transform: translate(-50%, -50%);
@@ -984,6 +985,18 @@ header {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    max-width: 100px;
+}
+.icon_itn {
+    position: absolute;
+}
+.icon_itn span {
+    border-radius: 17px;
+    background-color: #0d2a53;
+    text-align: center;
+    color: #fff;
+    padding: 5px 10px;
+    display: inline-block;
 }
 .circle_xecu .inner .icon-center {
     background:url('../images/mapicons/Artboard Copy 10.png') center center no-repeat;
