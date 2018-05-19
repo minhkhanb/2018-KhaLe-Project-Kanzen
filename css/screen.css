@@ -149,11 +149,15 @@ section h2 {
     margin-left: 1px;
     margin-right: 1px;
 }
-.c_card h3, .c_card p {
+.c_card h3, .c_card h3 a, .c_card p {
     font-size:14px;
     color: #103365;
     padding: 0 25px 10px;
     text-align: left;
+    text-decoration:none;
+}
+.c_card h3 a {
+    padding:0;
 }
 .c_card h3 {
     padding-bottom: 0;
@@ -528,7 +532,7 @@ header .time_line .inner {
 }
 .time_line .groups .group .iens {
     color:#fff;
-    font-size: 16px;
+    font-size: 15px;
     text-transform: capitalize;
     position: absolute;
     left: 50%;
