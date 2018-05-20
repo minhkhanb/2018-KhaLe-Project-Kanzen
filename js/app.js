@@ -31,9 +31,10 @@ Kanzen.commponent = () => {
 }
 
 Kanzen.carousel = () => {
-    $('.owl-carousel').owlCarousel({
-        loop: true,
+    var carousel = $('.owl-carousel').owlCarousel({
+        loop: false,
         margin: 10,
+        URLhashListener: true,
         responsiveClass: true,
         responsive: {
             0: {
@@ -52,8 +53,38 @@ Kanzen.carousel = () => {
         }
     });
 
-    var dot_len = $('.owl-dots').find('.owl-dot').length;
-    //for
+
+    const item_title = $('.watch_videos .titles ul li'),
+        dot_list = $('.owl-dots').find('.owl-dot');
+
+    let is_touch = false;
+
+    const update_nav_title = () => {
+        item_title.find('a').removeClass('active');
+        var indexOfActive = -1;
+        for (var i = 0; i < dot_list.length; i++) {
+            if (dot_list.eq(i).hasClass('active')) {
+                indexOfActive = i;
+                break;
+            }
+        }
+
+        if (indexOfActive != -1 && !is_touch) {
+            item_title.eq(indexOfActive).find('a').addClass('active');
+            is_touch = true;
+        }
+    }
+    update_nav_title();
+    item_title.on('click', 'a', function (evt) {
+        update_nav_title();
+        $(this).addClass('active');
+    });
+
+    carousel.on('changed.owl.carousel', function () {
+        is_touch = false;
+        update_nav_title();
+    });
+
 }
 
 Kanzen.circle_xecu = () => {
@@ -118,13 +149,13 @@ Kanzen.chart_ui = () => {
             indexLabelFontSize: 16,
             indexLabel: "{label} - {y}%",
             dataPoints: [
-                { y: 51.08, label: "Chrome" },
-                { y: 27.34, label: "Internet Explorer" },
-                { y: 10.62, label: "Firefox" },
-                { y: 5.02, label: "Microsoft Edge" },
-                { y: 4.07, label: "Safari" },
-                { y: 1.22, label: "Opera" },
-                { y: 0.44, label: "Others" }
+                {y: 51.08, label: "Chrome"},
+                {y: 27.34, label: "Internet Explorer"},
+                {y: 10.62, label: "Firefox"},
+                {y: 5.02, label: "Microsoft Edge"},
+                {y: 4.07, label: "Safari"},
+                {y: 1.22, label: "Opera"},
+                {y: 0.44, label: "Others"}
             ]
         }]
     });

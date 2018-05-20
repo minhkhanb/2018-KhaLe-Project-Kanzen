@@ -837,7 +837,9 @@ header .time_line .inner {
     margin-left: 0;
 }
 
-.watch_videos .titles a.active {
+.watch_videos .titles a.active,
+.watch_videos .titles a:focus,
+.watch_videos .titles a:active{
     color: #103365;
     border-bottom-style: solid;
     border-bottom-width: 5.4px;
