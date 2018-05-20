@@ -61,22 +61,22 @@ Kanzen.circle_xecu = () => {
     var $list = $('.circle_xecu .inner li');
     var $inner = $('.circle_xecu .inner');
     var o_coors = {
-      x: $center.offset().left - $inner.offset().left + $center.width()/2,
-      y: $center.offset().top - $inner.offset().top + $center.height()/2
+        x: $center.offset().left - $inner.offset().left + $center.width() / 2,
+        y: $center.offset().top - $inner.offset().top + $center.height() / 2
     };
 
-    function toRadians (angle) {
+    function toRadians(angle) {
         return angle * (Math.PI / 180);
     }
 
-    var deg = 0;
+    var deg = -45;
     var deg_icon = 0;
     var icon_itn_dis = 0;
-    for(var i = 0; i < $list.length; i++) {
+    for (var i = 0; i < $list.length; i++) {
         deg += 30;
         deg_icon += 36;
-        $list.eq(i).find('a').css('left', o_coors.x + parseInt(Math.cos(toRadians(deg)) * radius));
-        $list.eq(i).find('a').css('top', o_coors.y - parseInt(Math.sin(toRadians(deg)) * radius));
+        $list.eq(i).find('a').css('left', o_coors.x + parseInt(Math.cos(toRadians(90 - deg)) * radius));
+        $list.eq(i).find('a').css('top', o_coors.y - parseInt(Math.sin(toRadians(90 - deg)) * radius));
 
         $list.eq(i).find('.icon_itn').css('left', o_coors.x + parseInt(Math.cos(toRadians(deg_icon)) * radius_icon));
         $list.eq(i).find('.icon_itn').css('top', o_coors.y - parseInt(Math.sin(toRadians(deg_icon)) * radius_icon));
@@ -90,10 +90,10 @@ Kanzen.videoJS = () => {
         var el = $(this);
         el.closest('.c-panel').addClass('playing');
         var video = el.closest('.c-panel').find('video').get(0);
-        if(video.paused) {
+        if (video.paused) {
             video.play();
         }
-        $(video).bind("ended", function() {
+        $(video).bind("ended", function () {
             el.closest('.c-panel').removeClass('playing');
         });
     });
