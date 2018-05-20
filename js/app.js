@@ -11,7 +11,7 @@ Kanzen.Init = () => {
     Kanzen.videoJS();
     Kanzen.circle_xecu();
     //Kanzen.chart_ui();
-    Kanzen.chart_working();
+    //Kanzen.chart_working();
 };
 
 Kanzen.commponent = () => {
@@ -31,7 +31,7 @@ Kanzen.commponent = () => {
 }
 
 Kanzen.carousel = () => {
-    var carousel = $('.owl-carousel').owlCarousel({
+    var carousel = $('.videos .owl-carousel').owlCarousel({
         loop: false,
         margin: 10,
         URLhashListener: true,
@@ -55,7 +55,7 @@ Kanzen.carousel = () => {
 
 
     const item_title = $('.watch_videos .titles ul li'),
-        dot_list = $('.owl-dots').find('.owl-dot');
+        dot_list = $('.videos .owl-dots').find('.owl-dot');
 
     let is_touch = false;
 
