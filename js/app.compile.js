@@ -55,8 +55,8 @@ Kanzen.carousel = function () {
 };
 
 Kanzen.circle_xecu = function () {
-    var radius = 200;
-    var radius_icon = 350;
+    var radius = 130;
+    var radius_icon = 250;
     var $center = $('.circle_xecu .inner .icon-center');
     var $list = $('.circle_xecu .inner li');
     var $inner = $('.circle_xecu .inner');

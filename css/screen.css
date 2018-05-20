@@ -2,11 +2,11 @@ body {
     width: 100%;
     margin: 0 auto;
     padding: 0px;
-    font-family: helvetica;
-    height: 300%;
-
+    font-size: 16px;
 }
-
+:root {
+    font-size: 16px;
+}
 #wrapper {
     text-align: center;
     margin: 0 auto;
@@ -170,6 +170,8 @@ section h2 {
     font-weight: bold;
     text-align: left;
     line-height: 20px;
+    height: 3.75rem;
+    overflow: hidden;
 }
 
 .c_card p {
@@ -177,6 +179,7 @@ section h2 {
     padding-left: 35px;
     padding-right: 35px;
     margin-bottom: 0;
+    height: 5.875rem;
 }
 
 .c_card .img {
@@ -200,8 +203,22 @@ section h2 {
     color: #fff;
     font-size: 16px;
     display: inline-block;
-    padding: 5px 15px 5px 60px;
+    padding: 5px 15px 5px 15px;
     text-decoration: none;
+}
+
+.clear-all .btn-default:hover {
+    color:#fff;
+}
+
+.btn_primary_dc:hover {
+    box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+    -ms-transform: translateY(-3px);
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    -webkit-transition: all 0.45s cubic-bezier(0.68,0,0.265,3);
+    -moz-transition: all 0.45s cubic-bezier(0.68,0,0.265,3);
+    transition: all 0.45s cubic-bezier(0.68,0,0.265,3);
 }
 
 .action {
@@ -329,9 +346,9 @@ section h2 {
 
 .c-content .join {
     display: block;
-    width: 54px;
-    height: 54px;
-    background: url('../images/joinFFbuttons/fb.png') 0 0 no-repeat;
+    width: 45px;
+    height: 45px;
+   /* background: url('../images/joinFFbuttons/fb.png') 0 0 no-repeat;*/
     position: absolute;
     left: -80px;
     top: 50%;
@@ -340,6 +357,10 @@ section h2 {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
+    border-radius: 9px;
+    background-image: linear-gradient(135deg, #ffe044, #f77474);
+    line-height: 45px;
+    text-align: center;
 }
 
 .c-content .join .solid {
@@ -1246,6 +1267,10 @@ header {
 .highcharts-title,
 .highcharts-subtitle {
     display:none;
+}
+
+.advisor .c-content .join {
+    color:#fff;
 }
 
 @media (min-width: 992px) {
