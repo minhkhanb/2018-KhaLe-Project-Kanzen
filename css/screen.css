@@ -1006,7 +1006,7 @@ header {
 
 .fanfare_timeline .time_line .inner .v_line + .v_line + .v_line + .v_line + .v_line span,
 .fanfare_timeline .time_line .inner .v_line + .v_line + .v_line + .v_line + .v_line + .v_line span {
-    margin-left: 7px;
+    margin-left: 12px;
 }
 
 .fanfare_timeline .time_line .groups .group:first-child + .group {
