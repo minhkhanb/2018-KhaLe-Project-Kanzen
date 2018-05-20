@@ -10,6 +10,8 @@ Kanzen.Init = () => {
     Kanzen.count_down_timer();
     Kanzen.videoJS();
     Kanzen.circle_xecu();
+    //Kanzen.chart_ui();
+    Kanzen.chart_working();
 };
 
 Kanzen.commponent = () => {
@@ -96,6 +98,74 @@ Kanzen.videoJS = () => {
         $(video).bind("ended", function () {
             el.closest('.c-panel').removeClass('playing');
         });
+    });
+}
+
+Kanzen.chart_ui = () => {
+    var chart = new CanvasJS.Chart("chart_anim", {
+        theme: "light2", // "light1", "light2", "dark1", "dark2"
+        exportEnabled: true,
+        animationEnabled: true,
+        title: {
+            text: "Desktop Browser Market Share in 2016"
+        },
+        data: [{
+            type: "pie",
+            startAngle: 25,
+            toolTipContent: "<b>{label}</b>: {y}%",
+            showInLegend: "true",
+            legendText: "{label}",
+            indexLabelFontSize: 16,
+            indexLabel: "{label} - {y}%",
+            dataPoints: [
+                { y: 51.08, label: "Chrome" },
+                { y: 27.34, label: "Internet Explorer" },
+                { y: 10.62, label: "Firefox" },
+                { y: 5.02, label: "Microsoft Edge" },
+                { y: 4.07, label: "Safari" },
+                { y: 1.22, label: "Opera" },
+                { y: 0.44, label: "Others" }
+            ]
+        }]
+    });
+    chart.render();
+}
+
+Kanzen.chart_working = () => {
+    Highcharts.chart('chart_anim', {
+        chart: {
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 45
+            }
+        },
+        title: {
+            text: 'Contents of Highsoft\'s weekly fruit delivery'
+        },
+        subtitle: {
+            text: '3D donut in Highcharts'
+        },
+        plotOptions: {
+            pie: {
+                innerSize: 100,
+                depth: 45
+            }
+        },
+        series: [{
+            name: 'Delivered amount',
+            data: [
+                ['Bananas', 8],
+                ['Kiwi', 3],
+                ['Mixed nuts', 1],
+                ['Oranges', 6],
+                ['Apples', 8],
+                ['Pears', 4],
+                ['Clementines', 4],
+                ['Reddish (bag)', 1],
+                ['Grapes (bunch)', 1]
+            ]
+        }]
     });
 }
 
