@@ -31,6 +31,29 @@ Kanzen.commponent = () => {
 }
 
 Kanzen.carousel = () => {
+
+    var carousel_fanfare_timeline = $('.fanfare_timeline .owl-carousel').owlCarousel({
+        loop: false,
+        margin: 10,
+        URLhashListener: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: true
+            },
+            600: {
+                items: 1,
+                nav: false
+            },
+            1000: {
+                items: 1,
+                nav: true,
+                loop: false
+            }
+        }
+    });
+
     var carousel = $('.videos .owl-carousel').owlCarousel({
         loop: false,
         margin: 10,

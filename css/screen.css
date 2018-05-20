@@ -1063,7 +1063,8 @@ header {
     max-width: 110px;
 }
 
-.year_time span {
+.year_time span,
+.year_time a{
     font-size: 20px;
     font-weight: bold;
     font-style: normal;
@@ -1074,6 +1075,7 @@ header {
     color: #ffffff;
     position: relative;
     top: 5px;
+    text-decoration: none;
 }
 
 .year_time .dash_y {
