@@ -20,14 +20,6 @@ Kanzen.commponent = () => {
         $("html, body").animate({scrollTop: 0}, 0);
         return false;
     });
-
-    $('.c-fanfare li a').hover(function () {
-        $(this).animateCss('rotateIn', function () {
-
-        });
-    }, function () {
-
-    });
 }
 
 Kanzen.carousel = () => {
@@ -54,7 +46,7 @@ Kanzen.carousel = () => {
         }
     });
 
-    var carousel = $('.videos .owl-carousel').owlCarousel({
+    var carousel = $('.watch_videos .owl-carousel').owlCarousel({
         loop: false,
         margin: 10,
         URLhashListener: true,
@@ -78,7 +70,7 @@ Kanzen.carousel = () => {
 
 
     const item_title = $('.watch_videos .titles ul li'),
-        dot_list = $('.videos .owl-dots').find('.owl-dot');
+        dot_list = $('.watch_videos .owl-dots').find('.owl-dot');
 
     let is_touch = false;
 
@@ -111,8 +103,8 @@ Kanzen.carousel = () => {
 }
 
 Kanzen.circle_xecu = () => {
-    var radius = 150;
-    var radius_icon = 300;
+    var radius = 100;
+    var radius_icon = 250;
     var $center = $('.circle_xecu .inner .icon-center');
     var $list = $('.circle_xecu .inner li');
     var $inner = $('.circle_xecu .inner');

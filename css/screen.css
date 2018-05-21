@@ -7,6 +7,33 @@ body {
 :root {
     font-size: 16px;
 }
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes rotateInLink {
+    from {
+        -ms-transform: rotate(0deg); /* IE 9 */
+        -webkit-transform: rotate(0deg); /* Safari 3-8 */
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg); /* IE 9 */
+        -webkit-transform: rotate(360deg); /* Safari 3-8 */
+        transform: rotate(360deg);
+    }
+}
+
+/* Standard syntax */
+@keyframes rotateInLink {
+    from {
+        -ms-transform: rotate(0deg); /* IE 9 */
+        -webkit-transform: rotate(0deg); /* Safari 3-8 */
+        transform: rotate(0deg);
+    }
+    to {
+        -ms-transform: rotate(360deg); /* IE 9 */
+        -webkit-transform: rotate(360deg); /* Safari 3-8 */
+        transform: rotate(360deg);
+    }
+}
 #wrapper {
     text-align: center;
     margin: 0 auto;
@@ -14,24 +41,6 @@ body {
     width: 100%;
     max-width: 100%;
     overflow: hidden;
-    position: relative;
-}
-
-header:before {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    background: url('../images/bg/bgdesktop/header-bg.png') no-repeat top center;
-    background-size: 100% auto;
-    content: '';
-    width: 100%;
-    height: 100%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
-    z-index: -1;
 }
 
 .cn-contact .container {
@@ -72,7 +81,7 @@ header:before {
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
-    padding-top: 39px;
+    padding-top: 25px;
 }
 
 .nav-link {
@@ -128,7 +137,7 @@ section .line {
     /* border-image-source: linear-gradient(to right, #03cea4, #103365); */
     /* border-image-slice: 1; */
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 3.125rem;
     background-image: linear-gradient(to right, #03cea4, #103365);
 }
 
@@ -142,7 +151,8 @@ section h2 {
     text-align: center;
     text-transform: uppercase;
     color: #103365;
-    padding: 20px 0;
+    padding: 0 0 4.625rem;
+    margin: 0;
 }
 
 .c_card {
@@ -311,7 +321,7 @@ section h2 {
 }
 
 .bg {
-    padding: 0 20px 0 20px;
+    padding: 0 30px;
 }
 
 .bg .layer {
@@ -393,8 +403,8 @@ section h2 {
 
 header .c-body {
     max-width: 750px;
-    padding-top: 10px;
-    padding-left: 60px;
+    padding-top: 0px;
+    padding-left: 0px;
 }
 
 header h2 {
@@ -410,20 +420,20 @@ header h2 {
     color: transparent;
     text-indent: -9999em;
     overflow: hidden;
-    margin: 40px 0 0 0;
+    margin: 30px 0 0 0;
 }
 
 .c-event {
     background: #fff;
     border-radius: 9px;
-    max-width: 500px;
+    max-width: 430px;
     text-align: left;
-    padding: 25px 45px 0;
+    padding: 10px 42px 0;
 }
 
 .c-event h3 {
     color: #103365;
-    font-size: 27px;
+    font-size: 16px;
     text-transform: uppercase;
     padding-bottom: 20px;
     font-weight: bold;
@@ -432,7 +442,7 @@ header h2 {
 
 .c-event .numb strong {
     color: #03cea4;
-    font-size: 16px;
+    font-size: 13px;
     text-transform: uppercase;
     position: relative;
     top: -24px;
@@ -440,6 +450,10 @@ header h2 {
 
 .c-event .numb {
     text-align: center;
+
+}
+.c-event .numb .box > span > div {
+    font-size: 35px;
 }
 
 .c-event .numb .box {
@@ -447,8 +461,8 @@ header h2 {
 }
 
 .c-event .numb span {
-    width: 85.5px;
-    height: 85.5px;
+    width: 70px;
+    height: 70px;
     border-radius: 7.2px;
     background-color: #ffffff;
     box-shadow: inset 1px 1px 4px 0 #aaaaaa;
@@ -460,7 +474,7 @@ header h2 {
 }
 
 .c-event .numb span:not(.plit) {
-    line-height: 85.5px;
+    line-height: 70px;
 }
 
 .c-event .numb span.plit {
@@ -474,7 +488,7 @@ header h2 {
 .c-action .white_list {
     border-radius: 9px;
     background-image: linear-gradient(102deg, #ffe044, #f77474);
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     text-transform: uppercase;
     float: left;
@@ -484,8 +498,9 @@ header h2 {
     border-radius: 9px;
     border: solid 1.9px #ffffff;
     float: right;
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
+    padding: 10px 44px;
 }
 
 .c-action a {
@@ -495,12 +510,14 @@ header h2 {
 }
 
 .c-action {
-    max-width: 70%;
-    padding: 20px 0;
+    max-width: 430px;
+    padding: 15px 0 0;
 }
 
 header .c-body h2 {
     padding-bottom: 10px;
+    text-transform: capitalize;
+    font-size: 34px;
 }
 
 .c-fanfare {
@@ -508,7 +525,7 @@ header .c-body h2 {
 }
 
 .c-fanfare p {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
@@ -522,7 +539,7 @@ header .c-body h2 {
 .c-fanfare ul {
     list-style-type: none;
     display: inline-block;
-    padding: 25px 0 10px;
+    padding: 10px 0 0px;
 }
 
 .c-fanfare ul li {
@@ -532,8 +549,19 @@ header .c-body h2 {
 
 .c-fanfare ul li a {
     display: block;
-    width: 54px;
-    height: 54px;
+    width: 48px;
+    height: 48px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+
+}
+
+.c-fanfare ul li a:hover {
+    animation-name: rotateInLink;
+    animation-duration: 0.5s;
 }
 
 .logo_partner {
@@ -543,35 +571,42 @@ header .c-body h2 {
 
 .c-fanfare ul li a.an {
     background: url('../images/joinFFbuttons/tele.png') 0 0 no-repeat;
+    background-size: contain;
 }
 
 .c-fanfare ul li a.bn {
     background: url('../images/joinFFbuttons/med.png') 0 0 no-repeat;
+    background-size: contain;
 }
 
 .c-fanfare ul li a.cn {
     background: url('../images/joinFFbuttons/twt.png') 0 0 no-repeat;
+    background-size: contain;
 }
 
 .c-fanfare ul li a.dn {
     background: url('../images/joinFFbuttons/fb.png') 0 0 no-repeat;
+    background-size: contain;
 }
 
 .c-fanfare ul li a.en {
     background: url('../images/joinFFbuttons/utube.png') 0 0 no-repeat;
+    background-size: contain;
 }
 
 .c-fanfare ul li a.fn {
     background: url('../images/joinFFbuttons/ig.png') 0 0 no-repeat;
+    background-size: contain;
 }
 
 .c-fanfare ul li a.gn {
     background: url('../images/joinFFbuttons/wb.png') 0 0 no-repeat;
+    background-size: contain;
 }
 
 header .time_line,
 .fanfare_timeline .time_line {
-    margin-top: 75px;
+    margin-top: 50px;
     padding: 0 80px;
 }
 
@@ -732,9 +767,15 @@ header .time_line .inner {
 
 .clear-all {
     clear: both;
-    padding: 10% 0 11%;
-    background: url('../images/bg/bgdesktop/bg2.png') bottom center no-repeat;
-    background-size: 100% auto;
+    padding: 0;
+    position: absolute;
+    bottom: 9.625rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.c-img-prod img {
+    max-width: 525px;
 }
 
 .footer button, .clear-all button {
@@ -857,8 +898,6 @@ header .time_line .inner {
     max-width: 464px;
     float: right;
     text-align: left;
-    padding-top: 240px;
-    padding-bottom: 100px;
 }
 
 .con-text p {
@@ -899,22 +938,20 @@ section .meet_our_team .line {
 }
 
 section.cn-contact {
-    position: relative;
-    padding: 15px 0 45px;
+    padding: 0;
 }
 
 .product_phone .c-img-prod {
-    position: absolute;
-    top: 0;
-    left: 0;
+    float: left;
 }
 
 header {
-    padding-bottom: 50px;
+    overflow: hidden;
+    position: relative;
 }
 
 .w-nav {
-    padding: 0 0 0 45px;
+    padding: 0;
 }
 
 .c-panel.playing .thumbnails,
@@ -1120,7 +1157,7 @@ header {
 }
 
 .circle_xecu .inner ul li a {
-    font-size: 27.7px;
+    font-size: 25px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -1129,7 +1166,7 @@ header {
     display: block;
     width: auto;
     height: auto;
-    padding: 14px 10px;
+    padding: 11px 8px;
     background-color: #0d2a53;
     line-height: 21px;
     text-align: center;
@@ -1139,7 +1176,7 @@ header {
 }
 
 .circle_xecu {
-    padding: 360px 0;
+    padding: 260px 0;
 }
 
 .circle_xecu .inner ul.initial li a,
@@ -1151,7 +1188,7 @@ header {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    max-width: 100px;
+    max-width: 60px;
 }
 
 .app_store_prod .con-text {
@@ -1277,6 +1314,51 @@ header {
     color:#fff;
 }
 
+#navbarResponsive {
+    position: absolute;
+    width: 100%;
+}
+
+#chart_anim {
+    padding-top: 9.375rem;
+}
+#chart_anim ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.watch_videos .item > div {
+    max-width: 100%;
+}
+.watch_videos .item .videos {
+    border-radius: 9px;
+}
+.wrapper-container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+#wrapper section {
+    min-height: 720px;
+    position: relative;
+}
+
+section.cn-contact {
+    background: url(../images/bg/bgdesktop/bg2.png) bottom center no-repeat;
+    background-size: contain;
+}
+
+.inner-content .con-text {
+    padding-top:12rem;
+}
+
+section.header {
+    background: url('../images/bg/bgdesktop/header-bg.png') no-repeat bottom center;
+    background-size: 100% auto;
+}
+.icon_itn img {
+    max-width: 100%;
+}
+
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-collapse {
         display: -ms-flexbox !important;
@@ -1320,8 +1402,7 @@ header {
         line-height: normal;
         letter-spacing: 1.2px;
         color: #103365 !important;
-        position: absolute;
-        top: 44px;
+        top: 30px;
         padding-top: 10px;
         padding-bottom: 10px;
         position: absolute;
