@@ -54,7 +54,7 @@ Kanzen.carousel = () => {
         }
     });
 
-    var carousel = $('.videos .owl-carousel').owlCarousel({
+    var carousel = $('.watch_videos .owl-carousel').owlCarousel({
         loop: false,
         margin: 10,
         URLhashListener: true,
@@ -78,7 +78,7 @@ Kanzen.carousel = () => {
 
 
     const item_title = $('.watch_videos .titles ul li'),
-        dot_list = $('.videos .owl-dots').find('.owl-dot');
+        dot_list = $('.watch_videos .owl-dots').find('.owl-dot');
 
     let is_touch = false;
 
