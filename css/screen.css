@@ -180,7 +180,7 @@ section h2 {
     font-weight: bold;
     text-align: left;
     line-height: 20px;
-    height: 3.75rem;
+    height: 2.75rem;
     overflow: hidden;
 }
 
@@ -188,8 +188,13 @@ section h2 {
     font-size: 14px;
     padding-left: 35px;
     padding-right: 35px;
-    margin-bottom: 0;
-    height: 5.875rem;
+    margin-bottom: 10px;
+    height: 3.875rem;
+}
+
+section.meet_team .section .line {
+    margin-top: 165px;
+    margin-bottom: 50px;
 }
 
 .c_card .img {
@@ -261,11 +266,30 @@ section h2 {
     padding-bottom: 0%;
 }
 
-.meet_our_team {
+section.meet_team {
     background: url(../images/bg/bgdesktop/bg6.png) top center / 100% auto no-repeat;
     margin-top: 0px;
-    padding-top: 100px;
-    padding-bottom: 57%;
+    overflow: hidden;
+    padding-bottom: 44.375rem;
+}
+
+
+section .advisor {
+    padding-top: 9.375rem;
+}
+.strategic, .partners, .subscribe {
+    padding: 150px 0 0;
+}
+
+.subscribe form {
+    padding-top: 70px;
+}
+
+.subscribe .c-fanfare ul li {
+    margin-left: 30px;
+}
+.subscribe .c-fanfare ul li:first-child {
+    margin: 0;
 }
 
 .section .line {
@@ -288,6 +312,8 @@ section h2 {
 
 .meet_our_team h2 {
     color: #fff;
+    padding-bottom: 0;
+    margin-bottom: 80px;
 }
 
 .advisor h2 {
@@ -566,8 +592,10 @@ header .c-body h2 {
 
 .logo_partner {
     display: inline-block;
-    padding: 25px 0 40px;
+    padding: 25px 0 0px;
+    margin-bottom: 80px;
 }
+
 
 .c-fanfare ul li a.an {
     background: url('../images/joinFFbuttons/tele.png') 0 0 no-repeat;
@@ -778,7 +806,7 @@ header .time_line .inner {
     max-width: 525px;
 }
 
-.footer button, .clear-all button {
+.footer button, .footer button:hover, .clear-all button {
     border-radius: 7.2px;
     background-image: linear-gradient(105deg, #ffe044, #f77474);
     color: #fff;
@@ -825,7 +853,7 @@ header .time_line .inner {
 }
 
 .nav_foot li a {
-    font-size: 21px;
+    font-size: 18px;
     color: #103365;
     font-weight: bold;
     text-transform: uppercase;
@@ -841,14 +869,21 @@ header .time_line .inner {
     color: #9b9b9b;
 }
 
-.footer {
-    background: url('../images/bg/bgdesktop/bg5.png') top center no-repeat;
+section.subscribe {
+    background: url('../images/bg/bgdesktop/bg5.png') bottom center no-repeat;
     background-size: 100% auto;
-    padding-top: 18%;
+
 }
 
 .owl-nav {
     display: none;
+}
+
+.social_links {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
 }
 
 .watch_videos .titles a {
@@ -1377,6 +1412,10 @@ section.app_store {
 }
 .detail-chart {
     padding-bottom: 180px;
+}
+
+#wrapper section.footer {
+    min-height: 0;
 }
 
 @media (min-width: 992px) {
