@@ -1195,6 +1195,7 @@ header {
     float: none;
     padding: 0;
     margin: 0 auto;
+    padding-bottom: 75px;
 }
 
 .app_store_prod .phone_item.phone_left {
@@ -1202,11 +1203,14 @@ header {
     position: relative;
     left: -60px;
     top: 85px;
+    max-width: 231px;
+    z-index: 1;
 }
 
 .app_store_prod .phone_prod {
     position: relative;
-    padding-bottom: 85px;
+    padding-bottom: 130px;
+
 }
 
 .app_store_prod .phone_item.phone_right {
@@ -1214,7 +1218,12 @@ header {
     top: 0;
     left: 50%;
     margin-left: -10px;
-    z-index: -1;
+    z-index: 0;
+    max-width: 193px;
+}
+
+.app_store_prod .phone_item img {
+    width: 100%;
 }
 
 .app_store_prod h2 {
@@ -1225,6 +1234,8 @@ header {
     line-height: normal;
     letter-spacing: 1.2px;
     color: #ffffff;
+    margin-bottom: 15px;
+    padding-bottom: 0;
 }
 
 .app_store_prod p {
@@ -1237,10 +1248,9 @@ header {
     color: #ffffff;
 }
 
-.app_store_prod {
+section.app_store {
     background: url('../images/bg/bgdesktop/bg3.png') bottom center no-repeat;
     background-size: 100% auto;
-    padding-bottom: 115px;
 }
 
 .icon_itn {
@@ -1357,6 +1367,9 @@ section.header {
 }
 .icon_itn img {
     max-width: 100%;
+}
+section.app_store {
+    padding-top: 208px;
 }
 
 @media (min-width: 992px) {
