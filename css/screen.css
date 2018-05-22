@@ -902,7 +902,7 @@ section.subscribe {
 
 .watch_videos .titles {
     text-align: center;
-    margin-bottom: 75px;
+    margin-bottom: 4.6875rem;
 }
 
 .watch_videos .titles ul li {
@@ -1315,7 +1315,7 @@ section.app_store {
 
 .detail-chart ul li div.left {
     display: inline-block;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
@@ -1323,7 +1323,7 @@ section.app_store {
     letter-spacing: 1.2px;
     text-align: right;
     color: #0d2a53;
-    width: 530px;
+    max-width: 530px;
 }
 
 .detail-chart ul li div.right {
@@ -1335,7 +1335,7 @@ section.app_store {
     line-height: 1.7;
     letter-spacing: 1.2px;
     color: #0d2a53;
-    width: 530px;
+    max-width: 530px;
     text-align: left;
 }
 
@@ -1385,6 +1385,7 @@ section.app_store {
 .wrapper-container {
     max-width: 1170px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 #wrapper section {
     min-height: 720px;
@@ -1411,14 +1412,14 @@ section.app_store {
     padding-top: 208px;
 }
 .detail-chart {
-    padding-bottom: 180px;
+    padding-bottom: 11.25rem;
 }
 
 #wrapper section.footer {
     min-height: 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .navbar-expand-lg .navbar-collapse {
         display: -ms-flexbox !important;
         display: flex !important;
@@ -1451,7 +1452,7 @@ section.app_store {
         padding-right: 1.5rem;
         padding-left: 1.5rem;
     }
-    .navbar-nav > li a.white_paper {
+    #mainNav .navbar-nav > li a.white_paper {
         border-radius: 5.8px;
         background-color: #ffffff;
         font-size: 17.3px;
@@ -1461,7 +1462,7 @@ section.app_store {
         line-height: normal;
         letter-spacing: 1.2px;
         color: #103365 !important;
-        top: 30px;
+        top: 1.875rem;
         padding-top: 10px;
         padding-bottom: 10px;
         position: absolute;
@@ -1469,10 +1470,13 @@ section.app_store {
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 991px) {
     #mainNav {
         background: transparent;
         display: block;
+        position: absolute;
+        width: 100%;
+        z-index: 99;
     }
     .navbar-toggle .icon-bar {
         background:#fff;
@@ -1484,8 +1488,10 @@ section.app_store {
     header .c-body h2 {
         max-width: 10px;
     }
-    .c-action a, .c-action .white_list {
+    #wrapper .c-action a, #wrapper .c-action .white_list {
         background:#103365;
+        padding: 12px 40px;
+        border: none;
     }
     .navbar-nav > li a.white_paper {
         background-color: transparent;
@@ -1494,18 +1500,73 @@ section.app_store {
         top: auto;
         right: auto;
     }
-    .container_fluid > .navbar-collapse {
-        background:#fff;
-        top: 30px;
-        position: absolute;
-        right: 0;
-        margin: 0;
-        padding: 0;
-    }
     .navbar-nav {
         padding: 0 20px;
     }
     .navbar-toggle {
         margin: 0;
+    }
+    .detail-chart ul li span {
+        top: 15px;
+    }
+    section.header {
+        background: url(../images/bg/bgmobile/bg1.png) no-repeat bottom center;
+        background-size: 100% auto;
+    }
+    header .c-body h2 {
+        font-size: 1.5rem;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+    #mainNav .navbar-nav > li a.white_paper {
+        top: 0.25rem;
+    }
+    header .c-body {
+        padding-top: 5rem;
+    }
+    .clear-all {
+        padding: 0 30px;
+        bottom: 2.625rem;
+    }
+    .footer input, .clear-all input {
+        padding: 26px 10px;
+        width: 320px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .footer button, .footer button:hover, .clear-all button {
+        padding: 8px 19px;
+    }
+    .con-text ul li {
+        float: none;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    .con-text > div {
+        text-align: center;
+    }
+    .app_store_prod h2, .app_store_prod p {
+        color:#0d2a53;
+    }
+    .app_store_prod .phone_item.phone_left {
+        max-width: 187px;
+        top: 50px;
+    }
+    .app_store_prod .phone_item.phone_right {
+        max-width: 157px;
+    }
+    .detail-chart ul li div.left,
+    .detail-chart ul li div.right{
+        margin: 0 auto;
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .detail-chart ul li span {
+        top: 0;
     }
 }
