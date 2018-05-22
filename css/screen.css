@@ -161,6 +161,7 @@ section h2 {
     box-shadow: 0 2px 6px 0 rgba(16, 51, 101, 0.89);
     margin-left: 1px;
     margin-right: 1px;
+    margin-bottom:15px;
 }
 
 .c_card h3, .c_card h3 a, .c_card p {
