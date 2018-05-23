@@ -13,6 +13,7 @@ Kanzen.Init = () => {
     Kanzen.supportResponsiveDesign();
 };
 
+
 Kanzen.supportResponsiveDesign = () => {
     let ratio = 1;
     const max_res = 1170;
@@ -91,13 +92,35 @@ Kanzen.supportResponsiveDesign = () => {
         });
         section.subscribe.form.element.css({
             'position': 'absolute',
-            'bottom': res_height.subscribe/2 + 55* ratio,
+            'bottom': res_height.subscribe / 2 + 55 * ratio,
             'width': '100%',
             'left': 0,
             'z-index': 1
         });
         section.subscribe.body.element.find('h2').css({
             'padding-bottom': 65 * ratio
+        });
+
+        const res_win = {
+          medium: 1199,
+          small: 1024
+        };
+
+        let width_line_long = 230, width_line_short = 210;
+
+        if($(window).width() < res_win.medium) {
+            width_line_long *= 0.75;
+            width_line_short *= 0.75;
+        }
+
+        $('.c-content').css({
+            'padding-left': 50 * ratio * 0.8
+        });
+        $('section.meet_team .c-content .join .solid, .advisor .c-content .join .solid').css({
+            'width': width_line_short
+        });
+        $('.strategic .c-content .join .solid').css({
+            'width': width_line_long
         });
 
     };
@@ -115,6 +138,19 @@ Kanzen.commponent = () => {
         $("html, body").animate({scrollTop: 0}, 0);
         return false;
     });
+
+    const card_p = $('.c_card p'), max_char = 100;
+    let numOfChar = 0, current_string = '';
+    for (let i = 0; i < card_p.text().length; i++) {
+        current_string += card_p.text()[i];
+        numOfChar++;
+        if (numOfChar > max_char) {
+            current_string += '...';
+            break;
+        }
+        //console.log(current_string);
+    }
+    card_p.text(current_string);
 }
 
 Kanzen.carousel = () => {

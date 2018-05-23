@@ -344,8 +344,11 @@ section .advisor {
 }
 
 .advisor .c-content .working,
+.strategic .c-content .working,
 .advisor .c-content h3, .advisor .c-content h3 a,
-.advisor .c-content .pos {
+.strategic .c-content h3, .strategic .c-content h3 a,
+.advisor .c-content .pos,
+.strategic .c-content .pos{
     color: #103365;
 }
 
@@ -360,7 +363,8 @@ section .advisor {
     left: 18px;
 }
 
-.advisor .bg .layer {
+.advisor .bg .layer,
+.strategic .bg .layer{
     background: rgba(216, 216, 216, 0.93);
 }
 
@@ -404,9 +408,9 @@ section .advisor {
 
 .c-content .join .solid {
     display: block;
-    width: 0;
+    width: 210px;
     height: 0;
-    padding: 1px 100px;
+    padding: 1px 0px;
     background: #fff;
     position: absolute;
     top: 50%;
@@ -418,7 +422,8 @@ section .advisor {
     transform: translateY(-50%);
 }
 
-.advisor .c-content .join .solid {
+.advisor .c-content .join .solid,
+.strategic .c-content .join .solid{
     background: #103365;
 }
 
@@ -1374,8 +1379,12 @@ section.app_store {
     display:none;
 }
 
-.advisor .c-content .join {
+.advisor .c-content .join,
+.strategic .c-content .join{
     color:#fff;
+}
+.strategic .c-content .join .solid {
+    width: 230px;
 }
 
 #navbarResponsive {
@@ -1431,7 +1440,7 @@ section.cn-contact .sp-res {
 }
 
 section.header {
-    background: url('../images/bg/bgdesktop/header-bg.jpg') no-repeat bottom center;
+    background: #051344 url(../images/bg/bgdesktop/header-bg.jpg) no-repeat bottom center;
     background-size: 100% auto;
 }
 section.header:after {
