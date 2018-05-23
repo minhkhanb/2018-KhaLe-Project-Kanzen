@@ -43,9 +43,9 @@ body {
     overflow: hidden;
 }
 
-.cn-contact .container {
+/*.cn-contact .container {
     position: relative;
-}
+}*/
 
 .navbar {
     position: relative;
@@ -802,6 +802,7 @@ header .time_line .inner {
     left: 0;
     right: 0;
     margin: auto;
+    z-index: 1;
 }
 .c-img-prod img {
     max-width: 525px;
@@ -957,10 +958,10 @@ section .meet_our_team .line {
     padding: 0;
 }
 
-.con-text ul li {
+/*.con-text ul li {
     float: left;
     margin-left: 30px;
-}
+}*/
 
 .con-text ul li:first-child {
     margin-left: 0;
@@ -980,6 +981,9 @@ section.cn-contact {
 
 .product_phone .c-img-prod {
     float: left;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
 }
 
 header {
@@ -1393,13 +1397,24 @@ section.app_store {
     position: relative;
 }
 
-section.cn-contact {
+section.cn-contact .sp-res {
     background: url(../images/bg/bgdesktop/bg2.png) bottom center no-repeat;
-    background-size: contain;
+    background-size: 100% auto;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    content:'';
 }
 
 .inner-content .con-text {
-    padding-top:12rem;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+.cn-contact .inner-content {
+    position: static;
 }
 
 section.header {

@@ -10,9 +10,62 @@ Kanzen.Init = () => {
     Kanzen.count_down_timer();
     Kanzen.videoJS();
     Kanzen.circle_xecu();
-    //Kanzen.chart_ui();
-    //Kanzen.chart_working();
+    Kanzen.supportResponsiveDesign();
 };
+
+Kanzen.supportResponsiveDesign = () => {
+    let ratio = 1;
+    const max_res = 1170;
+    let res_width, res_height;
+    const section = {
+        contact: {
+            bg: {
+                element: $('section.cn-contact .sp-res'),
+                w: 1170,
+                h: 298
+            },
+            content: {
+                element: $('section.cn-contact .con-text')
+            },
+            phone: {
+                element: $('section.cn-contact .product_phone .c-img-prod'),
+                w: 525,
+                h: 469
+            },
+            clearAll: {
+                element: $('section.cn-contact .clear-all')
+            }
+        }
+    };
+
+
+    const responsiveElement = () => {
+        let wrapperContainer = {
+            marginRight: $('.wrapper-container').css('margin-right')
+        }
+        ratio = $(window).width() > max_res ? 1 : $(window).width() / max_res;
+        res_height = $(window).width() * section.contact.bg.h / 1170;
+        section.contact.bg.element.css({
+            'height': res_height
+        });
+        section.contact.content.element.css({
+            'bottom': res_height + 15 * ratio,
+            'right': wrapperContainer.marginRight
+        });
+        section.contact.phone.element.css({
+            'bottom': res_height - 85 * ratio
+        });
+        section.contact.clearAll.element.css({
+            'bottom': res_height / 2 - 20 * ratio
+        });
+    };
+
+    responsiveElement();
+
+    $(window).resize(function (evt) {
+        responsiveElement();
+    });
+}
 
 Kanzen.commponent = () => {
     $("a[href='#top']").click(function (e) {
