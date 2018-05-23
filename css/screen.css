@@ -284,6 +284,8 @@ section .advisor {
 
 .subscribe form {
     padding-top: 70px;
+    position: relative;
+    z-index: 1;
 }
 
 .subscribe .c-fanfare ul li {
@@ -827,8 +829,11 @@ header .time_line .inner {
     font-size: 43px;
     color: #fff;
     text-align: center;
-    text-transform: capitalize;
-    padding: 65px 60px;
+    text-transform: initial;
+    padding: 0 15px 65px;
+    width: 950px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .footer .c-body .c-fanfare {
@@ -871,7 +876,7 @@ header .time_line .inner {
     color: #9b9b9b;
 }
 
-section.subscribe {
+section.subscribe .sp-res {
     background: url('../images/bg/bgdesktop/bg5.png') bottom center no-repeat;
     background-size: 100% auto;
 
@@ -881,9 +886,18 @@ section.subscribe {
     display: none;
 }
 
-.social_links {
+/*.social_links {
     position: absolute;
-    bottom: 0;
+    bottom: -15px;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+}*/
+
+.subscribe .c-body {
+    position:absolute;
+    bottom: -15px;
+    z-index: 1;
     width: 100%;
     left: 0;
 }
@@ -1012,7 +1026,7 @@ header {
     padding-bottom: 15%;
 }
 
-section.fanfare_timelines {
+section.fanfare_timelines .sp-res {
     background: url('../images/bg/bgdesktop/bg5.png') bottom center no-repeat;
     background-size: 100% auto;
 }
@@ -1397,12 +1411,14 @@ section.app_store {
 section.cn-contact .sp-res {
     background: url(../images/bg/bgdesktop/bg2.png) bottom center no-repeat;
     background-size: 100% auto;
+}
+
+.sp-res {
     position: absolute;
     bottom:0;
     left: 0;
     width: 100%;
     z-index: 0;
-    content:'';
 }
 
 .inner-content .con-text {

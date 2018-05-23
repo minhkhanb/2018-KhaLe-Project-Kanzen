@@ -16,7 +16,7 @@ Kanzen.Init = () => {
 Kanzen.supportResponsiveDesign = () => {
     let ratio = 1;
     const max_res = 1170;
-    let res_width, res_height;
+    let res_width, res_height = {};
     const section = {
         contact: {
             bg: {
@@ -35,6 +35,26 @@ Kanzen.supportResponsiveDesign = () => {
             clearAll: {
                 element: $('section.cn-contact .clear-all')
             }
+        },
+        fanfare_timeline: {
+            bg: {
+                element: $('section.fanfare_timelines .sp-res'),
+                w: 1170,
+                h: 591
+            }
+        },
+        subscribe: {
+            bg: {
+                element: $('section.subscribe .sp-res'),
+                w: 1170,
+                h: 591
+            },
+            form: {
+                element: $('section.subscribe form')
+            },
+            body: {
+                element: $('section.subscribe .c-body')
+            }
         }
     };
 
@@ -44,20 +64,42 @@ Kanzen.supportResponsiveDesign = () => {
             marginRight: $('.wrapper-container').css('margin-right')
         }
         ratio = $(window).width() > max_res ? 1 : $(window).width() / max_res;
-        res_height = $(window).width() * section.contact.bg.h / 1170;
+
+        res_height.contact = $(window).width() * section.contact.bg.h / 1170;
         section.contact.bg.element.css({
-            'height': res_height
+            'height': res_height.contact
         });
         section.contact.content.element.css({
-            'bottom': res_height + 15 * ratio,
+            'bottom': res_height.contact + 15 * ratio,
             'right': wrapperContainer.marginRight
         });
         /*section.contact.phone.element.css({
             'bottom': res_height - 85 * ratio
         });*/
         section.contact.clearAll.element.css({
-            'bottom': res_height / 2 - 20 * ratio
+            'bottom': res_height.contact / 2 - 20 * ratio
         });
+
+        res_height.fanfare_timeline = $(window).width() * section.fanfare_timeline.bg.h / 1170;
+        section.fanfare_timeline.bg.element.css({
+            'height': res_height.fanfare_timeline
+        });
+
+        res_height.subscribe = $(window).width() * section.subscribe.bg.h / 1170;
+        section.subscribe.bg.element.css({
+            'height': res_height.subscribe
+        });
+        section.subscribe.form.element.css({
+            'position': 'absolute',
+            'bottom': res_height.subscribe/2 + 55* ratio,
+            'width': '100%',
+            'left': 0,
+            'z-index': 1
+        });
+        section.subscribe.body.element.find('h2').css({
+            'padding-bottom': 65 * ratio
+        });
+
     };
 
     responsiveElement();
