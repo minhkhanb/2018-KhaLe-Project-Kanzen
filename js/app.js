@@ -52,9 +52,9 @@ Kanzen.supportResponsiveDesign = () => {
             'bottom': res_height + 15 * ratio,
             'right': wrapperContainer.marginRight
         });
-        section.contact.phone.element.css({
+        /*section.contact.phone.element.css({
             'bottom': res_height - 85 * ratio
-        });
+        });*/
         section.contact.clearAll.element.css({
             'bottom': res_height / 2 - 20 * ratio
         });

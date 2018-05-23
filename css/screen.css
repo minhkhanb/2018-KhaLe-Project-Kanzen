@@ -954,27 +954,22 @@ section .meet_our_team .line {
 
 .con-text ul {
     list-style-type: none;
-    display: inline-block;
     padding: 0;
 }
 
-<<<<<<< HEAD
 /*.con-text ul li {
     float: left;
     margin-left: 30px;
 }*/
 
-=======
->>>>>>> d3350e923fa25715912c7c72c563a18ee939bec0
 .con-text ul li:first-child {
     margin-left: 0;
 }
 
 .con-text ul li a {
     display: block;
-    width: 0;
     height: 0;
-    padding: 20px 65px;
+    padding: 20px 0px;
     background: #c0c0c0;
 }
 
@@ -984,8 +979,7 @@ section.cn-contact {
 
 .product_phone .c-img-prod {
     float: left;
-    position: absolute;
-    bottom: 0;
+    position: relative;
     z-index: 1;
 }
 
@@ -1394,8 +1388,6 @@ section.app_store {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
-    position: relative;
-    z-index: 1;
 }
 #wrapper section {
     min-height: 720px;
@@ -1414,16 +1406,12 @@ section.cn-contact .sp-res {
 }
 
 .inner-content .con-text {
-<<<<<<< HEAD
     position: absolute;
     right: 0;
     z-index: 1;
 }
 .cn-contact .inner-content {
     position: static;
-=======
-    padding-top:5rem;
->>>>>>> d3350e923fa25715912c7c72c563a18ee939bec0
 }
 
 section.header {
