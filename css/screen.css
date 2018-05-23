@@ -798,7 +798,7 @@ header .time_line .inner {
     clear: both;
     padding: 0;
     position: absolute;
-    bottom: 9.625rem;
+    bottom: -5rem;
     left: 0;
     right: 0;
     margin: auto;
@@ -958,11 +958,14 @@ section .meet_our_team .line {
     padding: 0;
 }
 
+<<<<<<< HEAD
 /*.con-text ul li {
     float: left;
     margin-left: 30px;
 }*/
 
+=======
+>>>>>>> d3350e923fa25715912c7c72c563a18ee939bec0
 .con-text ul li:first-child {
     margin-left: 0;
 }
@@ -1391,6 +1394,8 @@ section.app_store {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
+    position: relative;
+    z-index: 1;
 }
 #wrapper section {
     min-height: 720px;
@@ -1409,17 +1414,32 @@ section.cn-contact .sp-res {
 }
 
 .inner-content .con-text {
+<<<<<<< HEAD
     position: absolute;
     right: 0;
     z-index: 1;
 }
 .cn-contact .inner-content {
     position: static;
+=======
+    padding-top:5rem;
+>>>>>>> d3350e923fa25715912c7c72c563a18ee939bec0
 }
 
 section.header {
-    background: url('../images/bg/bgdesktop/header-bg.png') no-repeat bottom center;
+    background: url('../images/bg/bgdesktop/header-bg.jpg') no-repeat bottom center;
     background-size: 100% auto;
+}
+section.header:after {
+    background: url('../images/bg/bgdesktop/first_bottom.png') no-repeat bottom center;
+    background-size: 100% auto;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    content:'';
+    height: 100%;
+    z-index: 0;
 }
 .icon_itn img {
     max-width: 100%;
@@ -1526,8 +1546,7 @@ section.app_store {
         top: 15px;
     }
     section.header {
-        background: url(../images/bg/bgmobile/bg1.png) no-repeat bottom center;
-        background-size: 100% auto;
+        background-color:#031246;
     }
     header .c-body h2 {
         font-size: 1.5rem;
